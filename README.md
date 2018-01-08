@@ -21,7 +21,8 @@ The solution is to edit /etc/kubernetes/apiserver to remove SecurityContextDeny,
 
 KUBE_ADMISSION_CONTROL="--admission_control=NamespaceLifecycle,NamespaceExists,LimitRanger,ResourceQuota"
 
-#systemctl restart kube-apiserver.service
+# systemctl restart kube-apiserver.service
+
 After re-create pod:
 
 # kubectl create -f mysql.yaml
